@@ -1,0 +1,9 @@
+{
+  "name": "Hunt The Duck",
+  "description": "The classic Hunt The Duck Game",
+  "launch_path": "/index.html",
+  "developer": {
+    "name": "Asma Saidi"
+    },
+  "default_locale": "en-US"
+}
