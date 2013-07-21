@@ -1,14 +1,15 @@
-
-
-
-var canvas = document.getElementById('myCanvas');
-var context = canvas.getContext('2d');
-canvas.height = window.innerHeight;
-canvas.width = window.innerWidth;
+function drawBackground(){
+var ctx = document.getElementById("myCanvas").getContext("2d");
 var imageObj = new Image();
-imageObj.onload = function() {
-context.drawImage(imageObj,0,0);
-};
-imageObj.src = '../img/Background.jpg';
-      
+ctx.width = window.innerWidth;
+ctx.height = window.innerHeight;
+imageObj.src = './img/Background.jpg';
+ctx.drawImage(imageObj,0,0);
 
+}
+
+window.addEventListener('load', function readerOnLoad(evt) {
+  window.removeEventListener('load', readerOnLoad);
+  drawBackground();
+  
+});
